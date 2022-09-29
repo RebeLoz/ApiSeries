@@ -29,22 +29,22 @@ namespace ApiSeries.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post(Categoria categorias)
+        public async Task<ActionResult> Post(Categoria categoria)
         {
-            var existeSerie = await dbContext.Series.AnyAsync(x => x.Id == categorias.SerieId);
+            var existeSerie = await dbContext.Series.AnyAsync(x => x.Id == categoria.SerieId);
 
             if(!existeSerie)
             {
-                return BadRequest($"No existe la serie con el id: {categorias.SerieId}");
+                return BadRequest($"No existe la serie con el id: {categoria.SerieId}");
             }
 
-            dbContext.Add(categorias);
+            dbContext.Add(categoria);
             await dbContext.SaveChangesAsync();
             return Ok();
         }
 
         [HttpPut("{id:int}")]   
-        public async Task<ActionResult> Put(Categoria categorias, int id)
+        public async Task<ActionResult> Put(Categoria categoria, int id)
         {
             var exist = await dbContext.Categorias.AnyAsync (x => x.Id == id);
 
@@ -53,12 +53,12 @@ namespace ApiSeries.Controllers
                 return NotFound("La categoria especificada no existe.");
             }
 
-            if (categorias.Id != id)
+            if (categoria.Id != id)
             {
                 return BadRequest("El id de la categoria no coincide con el establecido en la url.");
             }
 
-            dbContext.Update(categorias);
+            dbContext.Update(categoria);
             await dbContext.SaveChangesAsync();
             return Ok();
         }
