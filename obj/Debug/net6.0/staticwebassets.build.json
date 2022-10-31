@@ -1,11 +1,54 @@
 {
   "Version": 1,
-  "Hash": "5vR6aa8St4F2Y2LMLFgfgAogtQMFrljhI0K7GTOtWBI=",
+  "Hash": "e/bHRLZfKBjo7hq7d7fOqCkxPaJuj0T38osMhYO+pMs=",
   "Source": "ApiSeries",
   "BasePath": "_content/ApiSeries",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "ApiSeries\\wwwroot",
+      "Source": "ApiSeries",
+      "ContentRoot": "C:\\Users\\user\\Documents\\Proyectos\\ApiSeries\\ApiSeries\\wwwroot\\",
+      "BasePath": "_content/ApiSeries",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\user\\Documents\\Proyectos\\ApiSeries\\ApiSeries\\wwwroot\\ProfeGustavo.txt",
+      "SourceId": "ApiSeries",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Documents\\Proyectos\\ApiSeries\\ApiSeries\\wwwroot\\",
+      "BasePath": "_content/ApiSeries",
+      "RelativePath": "ProfeGustavo.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ProfeGustavo.txt"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Documents\\Proyectos\\ApiSeries\\ApiSeries\\wwwroot\\Series.txt",
+      "SourceId": "ApiSeries",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Documents\\Proyectos\\ApiSeries\\ApiSeries\\wwwroot\\",
+      "BasePath": "_content/ApiSeries",
+      "RelativePath": "Series.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Series.txt"
+    }
+  ]
 }

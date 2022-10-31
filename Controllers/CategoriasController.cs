@@ -10,21 +10,26 @@ namespace ApiSeries.Controllers
     public class CategoriasController : ControllerBase
     {
         private readonly ApplicationDbContext dbContext;
+        private readonly ILogger<CategoriasController> log;
 
-        public CategoriasController (ApplicationDbContext context)
+        public CategoriasController(ApplicationDbContext context, ILogger<CategoriasController> log)
         {
             this.dbContext = context;
+            this.log = log;
         }
 
         [HttpGet]
+        [HttpGet("/listadoCategorias")]
         public async Task<ActionResult<List<Categoria>>> GetAll()
         {
+            log.LogInformation("Obteniendo listado de categorias");
             return await dbContext.Categorias.ToListAsync();
         }
 
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Categoria>> GetById(int id)
         {
+            log.LogInformation("El ID es: " + id);
             return await dbContext.Categorias.FirstOrDefaultAsync(x => x.Id == id);
         }
 
